@@ -1,39 +1,34 @@
 "use client";
 
 import Image from "next/image";
-import {
-  Mail,
-  MapPin,
-  BriefcaseBusiness,
-} from "lucide-react";
-
+import { MapPin, BriefcaseBusiness, Edit } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+const skills = [
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Node.js",
+  "MongoDB",
+  "JavaScript",
+  "TypeScript",
+  "Java",
+];
+const projects = [
+  {
+    title: "Modern Portfolio",
+    description: "Personal portfolio with dark mode and smooth animations.",
+  },
+  {
+    title: "E-Commerce App",
+    description: "Amazon-like full stack shopping platform.",
+  },
+  {
+    title: "Task Manager",
+    description: "Productivity app with authentication and dashboard.",
+  },
+];
 export default function ProfilePage() {
-  const skills = [
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Node.js",
-    "MongoDB",
-    "JavaScript",
-    "TypeScript",
-    "Java",
-  ];
-
-  const projects = [
-    {
-      title: "Modern Portfolio",
-      description: "Personal portfolio with dark mode and smooth animations.",
-    },
-    {
-      title: "E-Commerce App",
-      description: "Amazon-like full stack shopping platform.",
-    },
-    {
-      title: "Task Manager",
-      description: "Productivity app with authentication and dashboard.",
-    },
-  ];
-
   return (
     <section className="min-h-screen bg-white px-4 py-10 dark:bg-black sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
@@ -82,16 +77,11 @@ export default function ProfilePage() {
 
               {/* Social */}
               <div className="flex items-center justify-center gap-3 sm:justify-end">
-                {[
-                  Mail,
-                ].map((Icon, index) => (
-                  <button
-                    key={index}
-                    className="flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800 dark:text-white"
-                  >
-                    <Icon size={18} />
-                  </button>
-                ))}
+                <Button className="flex items-center justify-center rounded border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800 dark:text-white px-8 py-4">
+                  <Link href={"/edit-profile"}>
+                    <Edit size={22} />
+                  </Link>
+                </Button>
               </div>
             </div>
 
