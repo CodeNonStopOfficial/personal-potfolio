@@ -1,4 +1,4 @@
-export  function Footer() {
+export function Footer() {
   const footerLinks = {
     quickLinks: [
       { name: 'Home', href: '#' },
@@ -6,12 +6,14 @@ export  function Footer() {
       { name: 'Projects', href: '#' },
       { name: 'Contact', href: '#' },
     ],
+
     services: [
       { name: 'Web Development', href: '#' },
       { name: 'UI/UX Design', href: '#' },
       { name: 'Frontend Development', href: '#' },
       { name: 'Backend Development', href: '#' },
     ],
+
     socialLinks: [
       {
         name: 'GitHub',
@@ -27,6 +29,7 @@ export  function Footer() {
           </svg>
         ),
       },
+
       {
         name: 'LinkedIn',
         href: 'https://linkedin.com',
@@ -41,6 +44,7 @@ export  function Footer() {
           </svg>
         ),
       },
+
       {
         name: 'Twitter',
         href: 'https://twitter.com',
@@ -59,21 +63,24 @@ export  function Footer() {
   }
 
   return (
-    <footer className="bg-black text-white border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand Section */}
+    <footer className="bg-zinc-950 text-white border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          
+          {/* Brand */}
           <div>
-            <h2 className="text-3xl font-bold tracking-wide">
-              Virendra<span className="text-blue-500">.</span>
+            <h2 className="text-3xl font-bold">
+              Virendra
+              <span className="text-blue-500">.</span>
             </h2>
 
-            <p className="mt-4 text-gray-400 leading-relaxed text-sm">
-              Passionate Full Stack Developer building modern, responsive,
-              and user-friendly web applications with Next.js and modern web
-              technologies.
+            <p className="mt-5 text-zinc-400 leading-relaxed text-sm">
+              Passionate Full Stack Developer building modern,
+              responsive and high-performance web applications
+              using Next.js and modern technologies.
             </p>
 
+            {/* Social Icons */}
             <div className="flex items-center gap-4 mt-6">
               {footerLinks.socialLinks.map((social, index) => (
                 <a
@@ -81,7 +88,18 @@ export  function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-blue-500 hover:border-blue-500 transition-all duration-300"
+                  className="
+                    w-11 h-11
+                    rounded-full
+                    border border-zinc-700
+                    bg-zinc-900
+                    flex items-center justify-center
+                    text-zinc-300
+                    hover:bg-blue-500
+                    hover:border-blue-500
+                    hover:text-white
+                    transition-all duration-300
+                  "
                 >
                   {social.icon}
                 </a>
@@ -91,13 +109,20 @@ export  function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-5">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-5 text-white">
+              Quick Links
+            </h3>
+
             <ul className="space-y-3">
               {footerLinks.quickLinks.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-blue-500 transition duration-300"
+                    className="
+                      text-zinc-400
+                      hover:text-blue-400
+                      transition duration-300
+                    "
                   >
                     {link.name}
                   </a>
@@ -108,13 +133,20 @@ export  function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-semibold mb-5">Services</h3>
+            <h3 className="text-lg font-semibold mb-5 text-white">
+              Services
+            </h3>
+
             <ul className="space-y-3">
               {footerLinks.services.map((service, index) => (
                 <li key={index}>
                   <a
                     href={service.href}
-                    className="text-gray-400 hover:text-blue-500 transition duration-300"
+                    className="
+                      text-zinc-400
+                      hover:text-blue-400
+                      transition duration-300
+                    "
                   >
                     {service.name}
                   </a>
@@ -125,23 +157,45 @@ export  function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-semibold mb-5">Newsletter</h3>
+            <h3 className="text-lg font-semibold mb-5 text-white">
+              Newsletter
+            </h3>
 
-            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-              Subscribe to get updates about projects, blogs, and development
-              tips.
+            <p className="text-zinc-400 text-sm leading-relaxed mb-5">
+              Subscribe to receive latest updates, blogs,
+              and development tips.
             </p>
 
-            <form className="flex flex-col sm:flex-row lg:flex-col gap-3">
+            <form className="flex flex-col gap-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:border-blue-500 text-sm"
+                className="
+                  w-full
+                  px-4 py-3
+                  rounded-xl
+                  bg-zinc-900
+                  border border-zinc-700
+                  text-sm
+                  text-white
+                  placeholder:text-zinc-500
+                  focus:outline-none
+                  focus:border-blue-500
+                  transition
+                "
               />
 
               <button
                 type="submit"
-                className="px-5 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 transition duration-300 font-medium"
+                className="
+                  px-5 py-3
+                  rounded-xl
+                  bg-blue-500
+                  hover:bg-blue-600
+                  text-white
+                  font-medium
+                  transition duration-300
+                "
               >
                 Subscribe
               </button>
@@ -150,19 +204,27 @@ export  function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500 text-center md:text-left">
-            © 2026 Virendra Kumar Prajapati. All rights reserved.
-          </p>
+        <div className="border-t border-zinc-800 mt-14 pt-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-zinc-500 text-center md:text-left">
+              © 2026 Virendra Kumar Prajapati. All rights reserved.
+            </p>
 
-          <div className="flex items-center gap-6 text-sm text-gray-500">
-            <a href="#" className="hover:text-blue-500 transition">
-              Privacy Policy
-            </a>
+            <div className="flex items-center gap-6 text-sm">
+              <a
+                href="#"
+                className="text-zinc-500 hover:text-blue-400 transition"
+              >
+                Privacy Policy
+              </a>
 
-            <a href="#" className="hover:text-blue-500 transition">
-              Terms & Conditions
-            </a>
+              <a
+                href="#"
+                className="text-zinc-500 hover:text-blue-400 transition"
+              >
+                Terms & Conditions
+              </a>
+            </div>
           </div>
         </div>
       </div>
