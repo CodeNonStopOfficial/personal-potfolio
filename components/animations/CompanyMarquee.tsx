@@ -46,6 +46,7 @@ export default function CompanyMarquee() {
                   alt={company}
                   width={110}
                   height={40}
+    
                   className="h-7 w-auto dark:invert opacity-70 hover:opacity-100 transition"
                   draggable={false}
                 />

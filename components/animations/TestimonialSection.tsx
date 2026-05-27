@@ -48,7 +48,7 @@ const testimonials = [
   },
 ];
 
-export  function TestimonialSection() {
+export function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -70,7 +70,7 @@ export  function TestimonialSection() {
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) =>
-        prev + 1 >= testimonials.length ? 0 : prev + 1
+        prev + 1 >= testimonials.length ? 0 : prev + 1,
       );
     }, 3500);
 
@@ -78,14 +78,12 @@ export  function TestimonialSection() {
   }, [isMobile]);
 
   const handleNext = () => {
-    setCurrentIndex((prev) =>
-      prev + 3 >= testimonials.length ? 0 : prev + 3
-    );
+    setCurrentIndex((prev) => (prev + 3 >= testimonials.length ? 0 : prev + 3));
   };
 
   const handlePrev = () => {
     setCurrentIndex((prev) =>
-      prev - 3 < 0 ? Math.max(testimonials.length - 3, 0) : prev - 3
+      prev - 3 < 0 ? Math.max(testimonials.length - 3, 0) : prev - 3,
     );
   };
 
@@ -137,7 +135,7 @@ export  function TestimonialSection() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="sync">
             {visibleTestimonials.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -175,6 +173,10 @@ export  function TestimonialSection() {
                     alt={item.name}
                     width={52}
                     height={52}
+                    priority
+                    sizes="(max-width: 768px) 100vw,
+           (max-width: 1200px) 50vw,
+           33vw"
                     className="rounded-full object-cover border border-neutral-200 dark:border-neutral-700"
                   />
 

@@ -46,10 +46,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en" 
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+     data-scroll-behavior="smooth" >
       <body className={`${roboto.className}  min-h-full flex flex-col`} cz-shortcut-listen="true">
         <ConvexClientProvider>
           <ThemeProvider
