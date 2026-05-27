@@ -14,7 +14,7 @@ export default function CompanyMarquee() {
   ];
 
   return (
-    <section className="w-full py-14 overflow-hidden bg-white dark:bg-black">
+    <section className="w-full py-14 overflow-hidden bg-white dark:bg-[#0A0A0A]">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
