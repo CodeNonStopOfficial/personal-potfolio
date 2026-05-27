@@ -267,7 +267,7 @@ export function FeatureSection() {
               <div
                 className="
                   absolute inset-0
-                  bg-gradient-to-br
+                  bg-linear-to-br
                   from-blue-500/5
                   to-purple-500/5
                   opacity-0 transition
@@ -283,7 +283,7 @@ export function FeatureSection() {
                   flex h-14 w-14
                   items-center justify-center
                   rounded-2xl
-                  bg-gradient-to-br
+                  bg-linear-to-br
                   from-blue-600 to-purple-600
                   shadow-lg
                 "

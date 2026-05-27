@@ -79,7 +79,7 @@ function TimelineCard({
       {/* Timeline Dot */}
       <div
         className="
-          absolute -left-[29px] top-8
+          absolute left-[-29px] top-8
           h-4 w-4 rounded-full
           border-4 border-background bg-primary
         "

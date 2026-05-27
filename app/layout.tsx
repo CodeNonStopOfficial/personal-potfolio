@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono ,Roboto,Inter } from "next/font/google";
+import { Geist, Geist_Mono ,Roboto} from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/providers/ConvexClientProvider";
 import { Navbar } from "@/components/layouts/Navbar";
@@ -22,6 +22,7 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
 });
+
 
 export const metadata: Metadata = {
   title: "CodeNonstop - India's largest learning platform",
@@ -49,7 +50,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className={`${roboto.className} min-h-full flex flex-col`} cz-shortcut-listen="true">
+      <body className={`${roboto.className}  min-h-full flex flex-col`} cz-shortcut-listen="true">
         <ConvexClientProvider>
           <ThemeProvider
             attribute="class"
