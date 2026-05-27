@@ -70,7 +70,6 @@ function TimelineCard({
       whileHover={{
         y: -6,
       }}
-      id="education"
       className="
         relative rounded-3xl border bg-background/80
         p-4 shadow-sm backdrop-blur-md transition-all
@@ -144,6 +143,7 @@ function TimelineCard({
 export default function EducationSection() {
   return (
     <section
+     id="education"
       className="
         relative overflow-hidden
         py-14 sm:py-20 lg:py-28

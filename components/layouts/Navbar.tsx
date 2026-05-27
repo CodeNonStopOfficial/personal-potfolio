@@ -31,7 +31,7 @@ export function Navbar() {
             Services
           </Link>
           <Link className="hover:text-[#eb5d3a]" href="#education">
-            Experience
+            Education
           </Link>
           <Link className="hover:text-[#eb5d3a]" href="#about">
             About
