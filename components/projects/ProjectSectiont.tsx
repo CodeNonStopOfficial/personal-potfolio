@@ -5,11 +5,7 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import {
-  ArrowUpRight,
-  ExternalLink,
-  GitBranch,
-} from "lucide-react";
+import { ArrowUpRight, ExternalLink, GitBranch } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -18,18 +14,17 @@ const projects = [
     title: "E-Commerce Platform",
     description:
       "Modern full-stack e-commerce application with authentication, dashboard, payments, and admin panel.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
     tech: [
       "Next.js",
-       "React.js",
-       "PostGreSql",
+      "React.js",
+      "PostGreSql",
       "TypeScript",
       "Prisma",
       "Tailwind",
       "Neon",
       "Better Auth",
-      "Acject"
+      "Acject",
     ],
     github: "#",
     live: "#",
@@ -40,8 +35,7 @@ const projects = [
     title: "AI SaaS Dashboard",
     description:
       "Responsive AI dashboard with analytics, charts, authentication, and subscriptions.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
     tech: [
       "React",
       "Node.js",
@@ -57,7 +51,7 @@ const projects = [
       "NextAuth.js",
       "Sprine",
       "Next.js",
-      "Kubernative"
+      "Kubernative",
     ],
     github: "#",
     live: "#",
@@ -68,8 +62,7 @@ const projects = [
     title: "Portfolio Website",
     description:
       "Personal portfolio with animations, responsive design, and dark mode support.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     tech: [
       "React",
       "Node.js",
@@ -85,7 +78,7 @@ const projects = [
       "NextAuth.js",
       "Sprine",
       "Next.js",
-      "Kubernative"
+      "Kubernative",
     ],
     github: "#",
     live: "#",
@@ -107,7 +100,8 @@ const fadeUp = {
 
 export default function ProjectSection() {
   return (
-    <section id="project"
+    <section
+      id="project"
       className="
         relative overflow-hidden
         py-16 sm:py-20 lg:py-28
@@ -167,8 +161,7 @@ export default function ProjectSection() {
               lg:text-6xl
             "
           >
-            Featured Work &
-            Creative Projects
+            Featured Work & Creative Projects
           </h2>
 
           <p
@@ -180,9 +173,8 @@ export default function ProjectSection() {
               md:text-lg
             "
           >
-            A collection of full-stack applications,
-            responsive websites, and modern web projects
-            built with the latest technologies.
+            A collection of full-stack applications, responsive websites, and
+            modern web projects built with the latest technologies.
           </p>
         </motion.div>
 
@@ -313,13 +305,9 @@ export default function ProjectSection() {
                     sm:flex-row
                   "
                 >
-                  <Button
-                    asChild
-                    className="w-full sm:w-auto"
-                  >
+                  <Button asChild className="w-full sm:w-auto">
                     <Link href={project.live}>
                       <ExternalLink className="mr-2 h-4 w-4" />
-
                       Live Demo
                     </Link>
                   </Button>
@@ -330,8 +318,14 @@ export default function ProjectSection() {
                     className="w-full sm:w-auto"
                   >
                     <Link href={project.github}>
-                      <GitBranch className="mr-2 h-4 w-4" />
-
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5"
+                      >
+                        <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.21.08 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.23 1.92 1.23 3.23 0 4.61-2.8 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z" />
+                      </svg>
                       GitHub
                     </Link>
                   </Button>
@@ -357,14 +351,8 @@ export default function ProjectSection() {
             mt-14 flex justify-center
           "
         >
-          <Button
-            asChild
-            size="lg"
-            className="rounded-full px-8"
-          >
-            <Link href="/projects">
-              View All Projects
-            </Link>
+          <Button asChild size="lg" className="rounded-full px-8">
+            <Link href="/projects">View All Projects</Link>
           </Button>
         </motion.div>
       </div>
