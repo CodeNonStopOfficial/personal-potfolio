@@ -145,6 +145,7 @@ export function FeatureSection() {
 
   return (
     <section
+      id="services"
       className="
         relative overflow-hidden
         py-16 sm:py-20 lg:py-28
@@ -211,8 +212,7 @@ export function FeatureSection() {
               lg:text-6xl
             "
           >
-            AI Agents That Automate &
-            Accelerate Growth
+            AI Agent Automation Service provider and Techology
           </h2>
 
           <p
@@ -235,6 +235,7 @@ export function FeatureSection() {
           className="
             mt-14 grid gap-6
             sm:grid-cols-2
+            md:grid-cols-3
             xl:grid-cols-3
           "
         >

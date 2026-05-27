@@ -13,28 +13,30 @@ export function Navbar() {
     <header className="sticky top-0 z-50 max-w-full border-b bg-gray-100 dark:bg-[#000000]">
       <nav className="flex items-center justify-between gap-2 px-4 py-4">
         <div className="flex items-center gap-2">
-          <h1 className="md:text-2xl text-[18px] font-bold text-[#4500f4]">
-            <span className="text-bold text-[#f00]">Code</span>
-            Nonstop
-          </h1>
+          <Link href="/">
+            <h1 className="md:text-2xl text-[18px] font-bold text-[#4500f4]">
+              <span className="text-bold text-[#f00]">Code</span>
+              Nonstop
+            </h1>
+          </Link>
         </div>
         <div className="hidden md:flex items-center gap-8 text-[15px] font-semibold text-[#25252afb] dark:text-[#cecece]">
           <Link className="hover:text-[#eb5d3a]" href="/">
             Getting
           </Link>
-          <Link className="hover:text-[#eb5d3a]" href="/project">
+          <Link className="hover:text-[#eb5d3a]" href="#project">
             Project
           </Link>
-          <Link className="hover:text-[#eb5d3a]" href="/services">
+          <Link className="hover:text-[#eb5d3a]" href="#services">
             Services
           </Link>
-          <Link className="hover:text-[#eb5d3a]" href="/experience">
+          <Link className="hover:text-[#eb5d3a]" href="#education">
             Experience
           </Link>
-          <Link className="hover:text-[#eb5d3a]" href="/about">
+          <Link className="hover:text-[#eb5d3a]" href="#about">
             About
           </Link>
-          <Link className="hover:text-[#eb5d3a]" href="/contact">
+          <Link className="hover:text-[#eb5d3a]" href="#contact">
             Contact
           </Link>
         </div>

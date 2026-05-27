@@ -70,6 +70,7 @@ function TimelineCard({
       whileHover={{
         y: -6,
       }}
+      id="education"
       className="
         relative rounded-3xl border bg-background/80
         p-4 shadow-sm backdrop-blur-md transition-all

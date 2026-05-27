@@ -15,7 +15,7 @@ import { GitBranch, Link2Icon, Mail, TableRowsSplitIcon } from "lucide-react";
 
 export function ContactSection() {
   return (
-    <section
+    <section id="contact"
       className="
         relative overflow-hidden
         py-16 sm:py-20 lg:py-28

@@ -1,6 +1,7 @@
 
 import CompanyMarquee from "@/components/animations/CompanyMarquee";
 import { TestimonialSection } from "@/components/animations/TestimonialSection";
+import { AboutSection } from "@/components/contact/AboutSection";
 import { ContactSection } from "@/components/contact/ContactSection";
 import EducationSection from "@/components/home/EducationSection";
 import HeroSection from "@/components/home/HeroSection";
@@ -19,6 +20,7 @@ export default function HomePage() {
          <CompanyMarquee/>
          <FutureFeatureSection/>
          <TestimonialSection/>
+         <AboutSection/>
          <ContactSection/>
      </main>
   );
