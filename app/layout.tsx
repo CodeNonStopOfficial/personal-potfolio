@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono ,Roboto} from "next/font/google";
+import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/providers/ConvexClientProvider";
 import { Navbar } from "@/components/layouts/Navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Footer } from "@/components/layouts/Footer";
-
-
+import ScrollToTop from "@/components/animations/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +21,6 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
 });
-
 
 export const metadata: Metadata = {
   title: "CodeNonstop - India's largest learning platform",
@@ -46,11 +44,15 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en" 
+      lang="en"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-     data-scroll-behavior="smooth" >
-      <body className={`${roboto.className}  min-h-full flex flex-col`} cz-shortcut-listen="true">
+      data-scroll-behavior="smooth"
+    >
+      <body
+        className={`${roboto.className}  min-h-full flex flex-col`}
+        cz-shortcut-listen="true"
+      >
         <ConvexClientProvider>
           <ThemeProvider
             attribute="class"
@@ -59,8 +61,11 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer/>
+            <main className="flex-1">
+              <ScrollToTop />
+              {children}
+            </main>
+            <Footer />
           </ThemeProvider>
         </ConvexClientProvider>
       </body>
