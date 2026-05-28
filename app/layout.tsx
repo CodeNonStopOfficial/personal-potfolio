@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layouts/Navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Footer } from "@/components/layouts/Footer";
 import ScrollToTop from "@/components/animations/ScrollToTop";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -63,7 +64,7 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-1">
               <ScrollToTop />
-              {children}
+              <TooltipProvider>{children}</TooltipProvider>
             </main>
             <Footer />
           </ThemeProvider>
