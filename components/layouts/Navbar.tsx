@@ -119,7 +119,7 @@ export function Navbar() {
                       className: "text-black w-full dark:text-white",
                     })}
                   >
-                    <Link href="/sign-in">Sign In</Link>
+                    <Link href="/login">Sign In</Link>
                   </Button>
                 ) : (
                   <ProfileToggle  />
