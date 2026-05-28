@@ -1,51 +1,20 @@
-"use client"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
-import { api } from "@/convex/_generated/api";
-import { useMutation } from "convex/react";
-import { useState } from "react";
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
 
 export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
-
-  const createUser = useMutation(api.users.createUser);
-
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [passwordHash , setPassword] = useState("");
-
-  const [signUpInput, setSignUpInput] = useState({
-      name : "",
-      email : "",
-      passwordHash : ""
-  })
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    await createUser({
-      name,
-      email,
-      passwordHash
-    });
-
-    setName("");
-    setEmail("");
-
-    alert("User Added Successfully");
-  };
   return (
     <Card {...props}>
       <CardHeader>
@@ -55,18 +24,16 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit}>
+        <form>
           <FieldGroup>
             <Field>
               <FieldLabel htmlFor="name">Full Name</FieldLabel>
-              <Input id="name" value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="John Doe" required />
+              <Input id="name" type="text" placeholder="John Doe" required />
             </Field>
             <Field>
               <FieldLabel htmlFor="email">Email</FieldLabel>
               <Input
                 id="email"
-                value={email}
-                onChange={(e)=>setEmail(e.target.value)}
                 type="email"
                 placeholder="m@example.com"
                 required
@@ -78,7 +45,12 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
             </Field>
             <Field>
               <FieldLabel htmlFor="password">Password</FieldLabel>
-              <Input id="password" name="passwordHash" value={passwordHash} onChange={(e)=>setPassword(e.target.value)} type="password" required />
+              <Input
+                id="password"
+                name="passwordHash"
+                type="password"
+                required
+              />
               <FieldDescription>
                 Must be at least 8 characters long.
               </FieldDescription>
@@ -98,5 +70,5 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }
