@@ -74,55 +74,55 @@ export function Navbar() {
         <div>
           <div className="md:hidden border-t">
             <div className="flex flex-col gap-2 px-2 py-4 text-[16px] font-medium dark:text-gray-100">
-              <Link
+              <Link onClick={()=>setOpen(!open)}
                 className="border px-2 py-2 rounded bg-white dark:bg-[#121214]"
                 href="/"
               >
                 Getting
               </Link>
-              <Link
+              <Link onClick={()=>setOpen(!open)}
                 className="border px-2 py-2 rounded bg-white dark:bg-[#121214]"
-                href="/project"
+                href="#project"
               >
                 Project
               </Link>
-              <Link
+              <Link onClick={()=>setOpen(!open)}
                 className="border px-2 py-2 rounded bg-white dark:bg-[#121214]"
-                href="/services"
+                href="#services"
               >
                 Services
               </Link>
-              <Link
+              <Link onClick={()=>setOpen(!open)}
                 className="border px-2 py-2 rounded bg-white dark:bg-[#121214]"
-                href="/experience"
+                href="#Education"
               >
-                Experience
+                Education
               </Link>
-              <Link
+              <Link onClick={()=>setOpen(!open)}
                 className="border px-2 py-2 rounded bg-white dark:bg-[#121214]"
-                href="/about"
+                href="#about"
               >
                 About
               </Link>
-              <Link
+              <Link onClick={()=>setOpen(!open)}
                 className="border px-2 py-2 rounded bg-white dark:bg-[#121214]"
-                href="/contact"
+                href="#contact"
               >
                 Contact
               </Link>
 
               <div className="flex items-center flex-col justify-between pt-4">
                 {user ? (
-                  <Button
+                  <Button onClick={()=>setOpen(!open)}
                     className={buttonVariants({
                       variant: "outline",
                       className: "text-black w-full dark:text-white",
                     })}
                   >
-                    Sign In
+                    <Link href="/sign-in">Sign In</Link>
                   </Button>
                 ) : (
-                  <ProfileToggle />
+                  <ProfileToggle  />
                 )}
               </div>
             </div>

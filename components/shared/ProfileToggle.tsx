@@ -52,7 +52,7 @@ export function ProfileToggle() {
            <DropdownMenuSeparator />
           <DropdownMenuItem>
              <LayoutDashboard/>
-             <Link href="/admin/dashboard">Dashboard</Link>
+             <Link href="/dashboard">Dashboard</Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />

@@ -1,23 +1,23 @@
 export function Footer() {
   const footerLinks = {
     quickLinks: [
-      { name: 'Home', href: '#' },
-      { name: 'About', href: '#' },
-      { name: 'Projects', href: '#' },
-      { name: 'Contact', href: '#' },
+      { name: "Home", href: "#" },
+      { name: "About", href: "#" },
+      { name: "Projects", href: "#" },
+      { name: "Contact", href: "#" },
     ],
 
     services: [
-      { name: 'Web Development', href: '#' },
-      { name: 'UI/UX Design', href: '#' },
-      { name: 'Frontend Development', href: '#' },
-      { name: 'Backend Development', href: '#' },
+      { name: "Web Development", href: "#" },
+      { name: "UI/UX Design", href: "#" },
+      { name: "Frontend Development", href: "#" },
+      { name: "Backend Development", href: "#" },
     ],
 
     socialLinks: [
       {
-        name: 'GitHub',
-        href: 'https://github.com',
+        name: "GitHub",
+        href: "https://github.com",
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +31,8 @@ export function Footer() {
       },
 
       {
-        name: 'LinkedIn',
-        href: 'https://linkedin.com',
+        name: "LinkedIn",
+        href: "https://linkedin.com",
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -46,8 +46,8 @@ export function Footer() {
       },
 
       {
-        name: 'Twitter',
-        href: 'https://twitter.com',
+        name: "Twitter",
+        href: "https://twitter.com",
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,13 +60,12 @@ export function Footer() {
         ),
       },
     ],
-  }
+  };
 
   return (
     <footer className="bg-zinc-950 text-white border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          
           {/* Brand */}
           <div>
             <h2 className="text-3xl font-bold">
@@ -75,9 +74,9 @@ export function Footer() {
             </h2>
 
             <p className="mt-5 text-zinc-400 leading-relaxed text-sm">
-              Passionate Full Stack Developer building modern,
-              responsive and high-performance web applications
-              using Next.js and modern technologies.
+              Passionate Full Stack Developer building modern, responsive and
+              high-performance web applications using Next.js and modern
+              technologies.
             </p>
 
             {/* Social Icons */}
@@ -108,62 +107,58 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-5 text-white">
-              Quick Links
-            </h3>
-
-            <ul className="space-y-3">
-              {footerLinks.quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="
+          <div className="grid grid-cols-2">
+            <div>
+              <h3 className="text-lg font-semibold mb-5 text-white">
+                Quick Links
+              </h3>
+              <ul className="space-y-3">
+                {footerLinks.quickLinks.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      className="
                       text-zinc-400
                       hover:text-blue-400
                       transition duration-300
                     "
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-5 text-white">
+                Services
+              </h3>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-5 text-white">
-              Services
-            </h3>
-
-            <ul className="space-y-3">
-              {footerLinks.services.map((service, index) => (
-                <li key={index}>
-                  <a
-                    href={service.href}
-                    className="
+              <ul className="space-y-3">
+                {footerLinks.services.map((service, index) => (
+                  <li key={index}>
+                    <a
+                      href={service.href}
+                      className="
                       text-zinc-400
                       hover:text-blue-400
                       transition duration-300
                     "
-                  >
-                    {service.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+                    >
+                      {service.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-
-          {/* Newsletter */}
           <div>
             <h3 className="text-lg font-semibold mb-5 text-white">
               Newsletter
             </h3>
 
             <p className="text-zinc-400 text-sm leading-relaxed mb-5">
-              Subscribe to receive latest updates, blogs,
-              and development tips.
+              Subscribe to receive latest updates, blogs, and development tips.
             </p>
 
             <form className="flex flex-col gap-3">
@@ -204,7 +199,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-zinc-800 mt-14 pt-6">
+        <div className="border-t border-zinc-800 mt-4 pt-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-zinc-500 text-center md:text-left">
               © 2026 Virendra Kumar Prajapati. All rights reserved.
@@ -229,5 +224,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
