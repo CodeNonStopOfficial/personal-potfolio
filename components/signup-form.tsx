@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -25,6 +26,12 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
   const [email, setEmail] = useState("");
   const [passwordHash , setPassword] = useState("");
 
+  const [signUpInput, setSignUpInput] = useState({
+      name : "",
+      email : "",
+      passwordHash : ""
+  })
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -71,7 +78,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
             </Field>
             <Field>
               <FieldLabel htmlFor="password">Password</FieldLabel>
-              <Input id="password" value={passwordHash} onChange={(e)=>setPassword(e.target.value)} type="password" required />
+              <Input id="password" name="passwordHash" value={passwordHash} onChange={(e)=>setPassword(e.target.value)} type="password" required />
               <FieldDescription>
                 Must be at least 8 characters long.
               </FieldDescription>
